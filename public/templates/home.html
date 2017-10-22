@@ -1,0 +1,9 @@
+<div class="main-container">
+  <div class="row">
+    <div class="col-sm-4 characters" ng-repeat="character in characters">
+      <a ui-sref="character({id: character._id, characterParam: character})">
+      {{character.name}} <img class="character-img" ng-src="{{character.mainImg}}">
+      More about {{character.name}}</a>
+    </div>
+  </div>
+</div>
