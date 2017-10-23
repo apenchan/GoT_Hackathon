@@ -2,7 +2,9 @@ var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
+var request = require('request');
 var characterRoutes = require('./routes/characterRoutes');
+// var clientID = 'Client-ID ' + process.env.IMGUR_CLIENT_ID
 var port = process.env.PORT || 3000;
 
 
@@ -10,6 +12,9 @@ var db = process.env.MONGODB_URI || "mongodb://localhost/got_app";
 mongoose.connect(db);
 
 var Character = require('./models/characterModel');
+
+var clientID = 'Client-ID ' + "2c5db418e949842"
+console.log(clientID)
 
 // var character1 = new Character({
 //   name: "Jon Snow",
@@ -69,6 +74,7 @@ app.get("/characters", function(req, res){
 })
 
 app.get('/characters/:id', function(req, res){
+  console.log(clientID+ "Helllllooooo")
   Character.findById(req.params.id, function(err, character){
     if(err){
       console.log(err)
@@ -77,6 +83,8 @@ app.get('/characters/:id', function(req, res){
     }
   })
 })
+
+// app.get('/images', )
 
 
 app.listen(port);

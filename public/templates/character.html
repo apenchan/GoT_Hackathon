@@ -1,6 +1,13 @@
 <div class="character-page" ng-controller="characterCtrl">
     <h3>
         <span>{{character.name}}</span>
+        <!-- <a ui-sref="images({id: character._id, imagesParam: character.images})">Get Images</a> -->
       </h3>
+      <img class="img-main" ng-src="{{character.mainImg}}"><br>
+      <div class="get-images" ng-repeat="x in characterImg| limitTo:quanity">
+        <h1>tyo</h1>
+        <img class="character-imgs" ng-src="{{x.link}}">
+      </div>
+      
 </div>
-<!-- <div ui-view></div> -->
+<div ui-view></div>

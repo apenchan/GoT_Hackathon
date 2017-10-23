@@ -15,5 +15,10 @@ app.config(['$stateProvider','$urlRouterProvider', function($stateProvider, $url
       characterParam: null
     }
   })
+  // .state('character.images', {
+  //   url: '/images',
+  //   controller: 'characterCtrl',
+  //   templateUrl: 'templates/character-images.html'
+  // })
   $urlRouterProvider.otherwise('/characters');
 }]);

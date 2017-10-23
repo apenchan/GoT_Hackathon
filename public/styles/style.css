@@ -11,3 +11,12 @@ img.character-img{
   height: 450px;
   width: 350px;
 }
+.get-images{
+  float: left;
+  width: 25%;
+  margin: 2%;
+}
+img.character-imgs{
+  height: 450px;
+  width: 350px;
+}
