@@ -18,8 +18,7 @@ app.controller('characterCtrl', function($scope, $stateParams, characterFactory)
       $scope.characterImg = response.data;
       // $scope.images.push.
     })
-    $scope.quanity=10;
+    $scope.quanity=30;
   }
-
-  $scope.getCharacterImg ();
+  $scope.getCharacterImg();
 })

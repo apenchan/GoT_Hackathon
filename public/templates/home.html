@@ -1,9 +1,13 @@
 <div class="main-container">
-  <div class="row">
-    <div class="col-sm-4 characters" ng-repeat="character in characters">
-      <a ui-sref="character({id: character._id, characterParam: character})">
-      {{character.name}} <img class="character-img" ng-src="{{character.mainImg}}">
-      More about {{character.name}}</a>
+  <!-- <a ui-sref="profile({id: user._id, userParam: user})">see profile</a> -->
+  <input class="form-control" type="text" ng-model="character" placeholder="Search Character" />
+  <div class="characters-container">
+    <div class="row">
+      <div class="col-sm-4 characters" ng-repeat="character in characters | filter: {name:character}">
+        <div class="character-name"> {{character.name}} </div>
+        <a ui-sref="character({id: character._id, characterParam: character})">
+      <img class="character-img" ng-src="{{character.mainImg}}"></a>
+      </div>
     </div>
   </div>
 </div>

@@ -1,22 +1,74 @@
+@font-face{
+  font-family: "CATFranken-Deutsch.ttf";
+  src: url(../fonts/CATFranken-Deutsch.ttf);
+}
+@font-face{
+  font-family: "GameofThrones.ttf";
+  src: url(../fonts/GameofThrones.ttf);
+}
+body{
+  background: url("https://images.unsplash.com/photo-1507388644107-ce16cdf15eba?dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+  background-size: cover;
+  /* height: 100vh; */
+  background-repeat: no-repeat;
+}
+.form-control{
+  width:50%;
+  margin: 1%;
+}
+div.container{
+  width: 100%;
+  padding: 0px;
+}
+.navbar-brand{
+  font-family: "GameofThrones.ttf"
+}
+.navbar-text{
+  float: right;
+  margin-right: 10%;
+  font-family: "GameofThrones.ttf";
+}
+/* .btn{
+  float: right;
+  margin: -21%;
+} */
 .main-container{
   overflow: hidden;
   width: 100%;
 }
 .characters{
   float: left;
-  width: 25%;
-  margin: 2%;
+  width: 30%;
+  margin: 1%;
 }
 img.character-img{
-  height: 450px;
-  width: 350px;
+  padding: 22px;
+  height: 528px;
+  width: 485px;
 }
+.character-name{
+  font-family: "CATFranken-Deutsch.ttf";
+  font-size: 30px;
+  text-align: center;
+}
+.character-description{
+  margin-left: 29%;
+  margin-right: 39%;
+  padding: 2%;
+  text-align: center;
+}
+/* .character-page-container{
+  float: left;
+} */
 .get-images{
   float: left;
   width: 25%;
   margin: 2%;
 }
 img.character-imgs{
-  height: 450px;
-  width: 350px;
+  height: 487px;
+  width: 407px;
+}
+img.img-main{
+  margin-left: 27%;
 }

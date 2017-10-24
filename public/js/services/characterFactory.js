@@ -1,3 +1,5 @@
+// var config = require("../../../config.js");
+
 app.factory('characterFactory', function($http, $stateParams){
 
   var characterFactory = {}
@@ -34,11 +36,22 @@ app.factory('characterFactory', function($http, $stateParams){
     })
   }
 
+  var getProfile = function(){
+    console.log($stateParams)
+    // var id = user._id
+    console.log("creating user profile")
+    return $http.get('/profile/')
+    .then(function(response){
+      return response.data
+    })
+  }
+
   return {
     allCharacters: allCharacters,
     getCharacter: getCharacter,
     clientID: clientID,
-    getCharacterImg: getCharacterImg
+    getCharacterImg: getCharacterImg,
+    getProfile: getProfile
   }
 
 })

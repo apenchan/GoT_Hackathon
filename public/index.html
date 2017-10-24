@@ -1,28 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <base href="/">
   <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="./styles/style.css">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
-<body ng-app="gotApp" ng-controller="mainCtrl">
-    <!-- <div class="row">
-      <div class="col-sm-4 characters" ng-repeat="character in characters">
-        {{character.name}} <img class="character-img" ng-src="{{character.mainImg}}">
-        <a ui-sref="character({id: character._id, characterParam: character})">More about {{character.name}}</a>
+
+<body ng-app="gotApp">
+  <div class="container" ng-controller="AuthCtrl">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" ui-sref="characters">Game Of Thrones</a>
+        </div>
+        <p class="navbar-text">{{currentUser}}</p>
+        <a ng-hide="currentUser" target="_self" href="/auth/facebook" class="btn navbar-btn btn-primary">Login</a>
+        <button ng-show="currentUser" type="button" ng-click="logout()" class="btn logout btn-default navbar-btn">Log Out</button>
+        <!-- <button type="button" ng-click="logout()" class="btn btn-default navbar-btn">Log Out</button> -->
       </div>
-    </div>
-  </div> -->
-  <div ui-view></div>
+    </nav>
+  </div>
+  <ui-view></ui-view>
   <script src="angular/angular.js"></script>
-  <script src="js/app.js"></script>
   <script src="@uirouter/core/_bundles/ui-router-core.js"></script>
   <script src="@uirouter/angularjs/release/ui-router-angularjs.js"></script>
+  <script src="js/app.js"></script>
   <script src="js/services/characterFactory.js"></script>
   <script src="js/controllers/mainController.js"></script>
   <script src="js/controllers/characterController.js"></script>
+  <script src="js/controllers/authController.js"></script>
+  <script src="js/controllers/profileController.js"></script>
 </body>
+
 </html>
